@@ -32,6 +32,9 @@ y_fuel= [i*1 for i in range(5)]
 y_paint_color= [i*1 for i in range(12)]
 y_brand= [i*1 for i in range(18)]
 
+st.header('Pre-owned car advertisement in the US market :car:')
+
+
 option = st.selectbox(
     'Comparison between the Price and the other characteristics',
     ('Price x Model', 'Price x Model Year','Price x Condition','Price x Cylinders', 'Price x Fuel','Price x Odometer','Price x Transmissions','Price x Type','Price x Paint Color','Price x Brand')
@@ -68,7 +71,7 @@ elif option == 'Price x Paint Color':
 elif option == 'Price x Brand':
     fig10 = anova(car_data, 'brand', 5,10,y_brand)
     st.plotly_chart(fig10)
-    
+
 def plot_histograms(histograms):
     for histogram in histograms:
         st.plotly_chart(histogram, use_container_width=True)

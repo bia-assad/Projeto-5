@@ -2,4 +2,4 @@
  plotly_express
  streamlit
  numpy
- f_oneway
+ scipy
